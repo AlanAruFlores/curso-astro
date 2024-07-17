@@ -1,12 +1,40 @@
 ---
 	console.log("Hola desde el servidor de nuevo");
 	const title  = "Proyecto en Astro";
+	const color = "amarillo";
+
+	const lenguajes = ["Java", "C#", "PHP", "C++"];
+	const esMayor = false;
+
 ---
-<h1>{title}</h1>
+
+<h1 class={color}>{title}</h1>
+
+<!-- Bucle For -->
+ <ul>
+	{lenguajes.map((x)=><li>
+		<h3>{x}</h3>
+		<button>Me gusta</button>
+	</li>)}
+ </ul>
+ <!-- <p>{lenguajes[0]}</p> -->
+
+
+<!-- If else -->
+<p>{esMayor ? "Tiene mas de 18 años" : "Tiene menos de 18"}</p>
+
+<!-- Sintaxis mas corta del if else -->
+<p>{esMayor && "Tiene mas de 18 años"}</p>
+<p>{!esMayor && "Tiene menos de 18"}</p>
+
 
 <style>
 	h1{
-		background-color: aqua;
+		background-color: black;
+	}
+
+	.amarillo{
+		color:yellow;
 	}
 </style>
 

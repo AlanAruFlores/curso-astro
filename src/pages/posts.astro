@@ -1,0 +1,15 @@
+---
+    const respuesta = await fetch("https://jsonplaceholder.typicode.com/posts");
+    //console.log(respuesta);
+
+    const respuestaJson = await respuesta.json();
+    //console.log(respuestaJson);
+---
+<h1>Posts</h1>
+<div>
+    {respuestaJson.map(x=>(
+        <h3>{x.title}</h3>
+        <p>{x.body}</p>
+        <br/> <br/>
+    ))}
+</div>
