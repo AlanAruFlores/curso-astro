@@ -1,0 +1,24 @@
+
+---
+    // Obtengo los atributos mediante "props" y uso la destructuracion
+    const {titulo} = Astro.props;
+---
+
+
+<div>
+    <h3>{titulo}</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore consequuntur ipsam a, numquam nam voluptatem impedit rem ipsa ex vitae debitis exercitationem deleniti quaerat error nisi nihil officiis quia blanditiis itaque! Sequi, distinctio asperiores! Quasi officia sequi dolore impedit deleniti!</p>
+</div>
+
+
+<!-- A este componente le puedo agregar su estilo -->
+ <style>
+    div{
+        background-color: #0a0a0a;
+        color:white;
+        font-family: Helvetica;
+        width: 300px;
+        padding: 20px;
+        margin: 20px
+    }
+ </style>
